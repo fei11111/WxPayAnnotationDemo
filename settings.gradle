@@ -1,0 +1,5 @@
+include ':wx-pay'
+include ':wx-pay-processor'
+include ':wx-pay-annotation'
+include ':app'
+rootProject.name = "WxPayAnnotationDemo"

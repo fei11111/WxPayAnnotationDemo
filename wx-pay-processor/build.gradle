@@ -1,0 +1,17 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':wx-pay-annotation')
+    implementation deps.auto.common
+    implementation deps.javapoet
+    implementation deps.auto.service
+    annotationProcessor deps.auto.service //需要添加service的注解处理器
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
